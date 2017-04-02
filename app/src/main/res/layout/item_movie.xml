@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+            android:id="@+id/movie_card_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="2dp"
+            android:layout_marginBottom="@dimen/spacing_minor"
+            android:layout_marginLeft="@dimen/spacing_micro"
+            android:layout_marginRight="@dimen/spacing_micro">
+
+        <LinearLayout
+                android:background="?selectableItemBackground"
+                android:id="@+id/parent_view"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <ImageView
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:layout_width="match_parent"
+                    android:minHeight="80dp"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/movie_image"
+                    android:transitionName="details"
+                    android:id="@+id/movie_item_icon"
+                    android:src="@mipmap/ic_launcher"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/spacing_minor"
+                    android:orientation="vertical">
+                <TextView
+                        android:maxLines="1"
+                        android:gravity="center"
+                        android:id="@+id/movie_item_name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        tools:text="1 Free coffee"
+                />
+
+                <RatingBar
+                        android:isIndicator="true"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:numStars="5"
+                        android:stepSize="0.1"
+                        android:layout_marginTop="@dimen/spacing_micro"
+                        android:id="@+id/movie_item_rating"
+                        android:progress="3"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                />
+                <TextView
+                        android:maxLines="1"
+                        android:gravity="center"
+                        android:id="@+id/movie_item_release_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        tools:text="2017-12-12"
+                />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</FrameLayout>

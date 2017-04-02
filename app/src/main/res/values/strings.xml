@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TheMovieDemo</string>
+    <string name="movie_image">movie image</string>
+    <string name="error_message">Oops, something went wrong.</string>
+    <string name="date_filter">Date Filter</string>
+    <string name="clean">Clean</string>
+</resources>
